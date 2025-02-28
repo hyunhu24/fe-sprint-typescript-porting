@@ -16,7 +16,6 @@ function Todos() {
     setTodos(newTodos);
   };
 
-
   const removeTodo = id => {
     const removeArr = [...todos].filter(todo => todo.id !== id);
 
@@ -26,14 +25,14 @@ function Todos() {
   const completeTodo = id => {
     const completedTodo = todos.map(todo => {
       if (todo.id === id) {
-        todo.isComplete = !todo.isComplete
+        todo.isComplete = !todo.isComplete;
       }
 
       return todo;
-    })
+    });
 
     setTodos(completedTodo);
-  }
+  };
 
   return (
     <div>
