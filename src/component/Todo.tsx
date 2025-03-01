@@ -5,14 +5,14 @@ import { TodoProps } from "./type";
 const Todo:React.FC<TodoProps> = ({ todos, completeTodo, removeTodo }) => {
 
   return (
-    <div className='wrapper-todo'>
+    <div className='wrapper-todo' data-testid="todo">
       {todos.map((todo, index) => {
         const todoClass = todo.isComplete ?
           'todo-row complete' :
           'todo-row';
 
         return (
-          <div
+          <div 
             className={todoClass}
             key={index}
           >

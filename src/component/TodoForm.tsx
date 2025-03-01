@@ -31,7 +31,7 @@ const TodoForm: React.FC<TodoFormProps> = (props) => {
   }
 
   return (
-    <form id="todoForm" className="todo-form" onSubmit={handleSubmit}>
+    <form id="todoForm" data-testid="todo-form" className="todo-form" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Add a todo"
