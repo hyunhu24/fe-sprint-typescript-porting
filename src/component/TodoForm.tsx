@@ -1,6 +1,10 @@
+import React from "react";
 import { useState, useEffect, useRef } from 'react';
+import { TodoFormProps } from "./type";
 
-function TodoForm(props) {
+// function TodoForm(props) {
+//   console.log(props);
+const TodoForm: React.FC<TodoFormProps> = (props) => {
   const [input, setInput] = useState('');
   const [number, setNumber] = useState(1);
   const inputRef = useRef(null);
@@ -9,11 +13,11 @@ function TodoForm(props) {
     inputRef.current.focus();
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     setNumber(number + 1);

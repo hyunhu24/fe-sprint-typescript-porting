@@ -1,5 +1,8 @@
+import React from "react";
+import { TodoProps } from "./type";
 
-function Todo({ todos, completeTodo, removeTodo }) {
+// const Todo = ({ todos, completeTodo, removeTodo }: TodoProps) => {
+const Todo:React.FC<TodoProps> = ({ todos, completeTodo, removeTodo }) => {
 
   return (
     <div className='wrapper-todo'>

@@ -2,8 +2,10 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "CommonJS",
+    "jsx": "react-jsx",
     "sourceMap": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "esModuleInterop": true
   },
   "include": ["src/**/*"]
 }
